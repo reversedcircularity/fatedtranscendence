@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+#maincontainer {
+    background: url('assets/containerbg.png');
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
