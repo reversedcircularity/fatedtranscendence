@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -16,17 +18,17 @@
 .container {
     width: 500px;
     height: 700px;
-    background-color: black;
-    border: 2px solid white;
+    background: repeating-linear-gradient(to bottom, black 0px, #0c1f3d 4px, black 8px);
+    border: 3px solid cyan;
 
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0px 0px 5px 2px white, inset 0px 0px 5px 2px white;
+    box-shadow: 0px 0px 5px 2px cyan, inset 0px 0px 5px 2px cyan;
 
     font-size: 125%;
-    font-family: monospace; 
-    color: white; 
-    text-shadow: 0 0 5px white;
+    font-family: Michroma; 
+    color: cyan; 
+    text-shadow: 0 0 5px cyan;
 
     place-self: center;
     text-align: center;
@@ -37,4 +39,9 @@ canvas {
     inset: 0;
     z-index: 9999;
     pointer-events: none;
+}
+
+.loginheader {
+    font-size: 125%;
+    font-weight: bold;
 }
