@@ -11,6 +11,7 @@
         <script src="https://cdn.jsdelivr.net/npm/pixi.js@7/dist/pixi.min.js"></script>
         <script src="js/break_eternity.js"></script>
         
+        <script src="codecheck.js" defer></script>
         <script src="bgparticles.js" defer></script>
         <script src="crteffect.js" defer></script>
     </head>
@@ -22,7 +23,10 @@
             <div class="container">
                 <img src="assets/deicide2.png" style="display: block; margin: auto; width: 50%;"> <br>
                 <p class="loginheader">PROJECT OUROBOROS <br> FINALE // THE SUPREMUM</p> <br>
-                <hr style="border: 2px solid; border-image: linear-gradient(to right, transparent, cyan, transparent) 1;">
+                <hr style="border: 2px solid; border-image: linear-gradient(to right, transparent, cyan, transparent) 1;"> <br>
+                <label>Enter code: <input id="codebox" type="text" /></label>
+                <button id="authbutton">Submit</button>
+                <div id="message"></div>
             </div>
         </div>
     </body>
