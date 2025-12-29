@@ -21,5 +21,3 @@
 
 # Summary
 This is the official repository for Act IV "fractured eternity" of the currently in-development `fatedtranscendence.` storyline, the final phase of The Supremum's overhaul as part of the Eternal Joke Towers wiki.
-
-`fatedtranscendence.` marks the end of Project OUROBOROS' first phase, as well as the beginning of the final FRC-cycle's Lysocognizant Route. As for what will happen at the end? Just wait and see~
