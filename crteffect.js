@@ -16,6 +16,7 @@ const overlayLayer = new PIXI.Container();
 
 backgroundLayer.zIndex = 0;
 overlayLayer.zIndex = 10;
+app.stage.sortableChildren = true;
 
 app.stage.addChild(backgroundLayer);
 app.stage.addChild(overlayLayer);
