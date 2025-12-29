@@ -14,6 +14,9 @@ app.view.style.pointerEvents = 'none';
 const backgroundLayer = new PIXI.Container();
 const overlayLayer = new PIXI.Container();
 
+backgroundLayer.zIndex = 0;
+overlayLayer.zIndex = 10;
+
 app.stage.addChild(backgroundLayer);
 app.stage.addChild(overlayLayer);
 
