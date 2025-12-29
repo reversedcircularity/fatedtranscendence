@@ -1,25 +1,27 @@
 const PIXEL_SCALE = 3;
 
-const app = new PIXI.Application({
+const bgApp = new PIXI.Application({
   resizeTo: window,
   backgroundAlpha: 0,
   antialias: false
 });
 
-document.body.appendChild(app.view);
-app.view.style.pointerEvents = 'none';
+const overlayApp = new PIXI.Application({
+  resizeTo: window,
+  backgroundAlpha: 0,
+  antialias: false
+});
+
+document.getElementById('bg').appendChild(bgApp.view);
+document.getElementById('overlay').appendChild(overlayApp.view);
 
 // container layers
 
 const backgroundLayer = new PIXI.Container();
 const overlayLayer = new PIXI.Container();
 
-backgroundLayer.zIndex = 0;
-overlayLayer.zIndex = 10;
-app.stage.sortableChildren = true;
-
-app.stage.addChild(backgroundLayer);
-app.stage.addChild(overlayLayer);
+bgApp.stage.addChild(backgroundLayer);
+overlayApp.stage.addChild(overlayLayer);
 
 // bg layer
 
@@ -30,7 +32,7 @@ bgSprite.anchor.set(0.5);
 backgroundLayer.addChild(bgSprite);
 
 function resizeBackground() {
-  const { width, height } = app.screen;
+  const { width, height } = bgApp.screen;
 
   bgSprite.x = width / 2;
   bgSprite.y = height / 2;
@@ -51,8 +53,8 @@ const noiseCanvas = document.createElement('canvas');
 const noiseCtx = noiseCanvas.getContext('2d');
 
 function resizeNoiseCanvas() {
-  noiseCanvas.width = Math.floor(app.screen.width / PIXEL_SCALE);
-  noiseCanvas.height = Math.floor(app.screen.height / PIXEL_SCALE);
+  noiseCanvas.width = Math.floor(overlayApp.screen.width / PIXEL_SCALE);
+  noiseCanvas.height = Math.floor(overlayApp.screen.height / PIXEL_SCALE);
 }
 
 resizeNoiseCanvas();
@@ -84,7 +86,7 @@ function drawNoise() {
   noiseTexture.update();
 }
 
-app.ticker.add(drawNoise);
+overlayApp.ticker.add(drawNoise);
 
 // resizing
 

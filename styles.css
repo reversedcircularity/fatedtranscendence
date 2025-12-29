@@ -41,6 +41,18 @@ canvas {
     pointer-events: none;
 }
 
+#bg {
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#overlay {
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+}
+
 .loginheader {
     font-size: 125%;
     font-weight: bold;
