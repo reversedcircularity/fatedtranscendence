@@ -9,7 +9,7 @@ const app = new PIXI.Application({
 document.body.appendChild(app.view);
 app.view.style.pointerEvents = 'none';
 
-// layers
+// container layers
 
 const backgroundLayer = new PIXI.Container();
 const overlayLayer = new PIXI.Container();
