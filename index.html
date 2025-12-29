@@ -14,13 +14,16 @@
         <script src="codecheck.js" defer></script>
         <script src="bgparticles.js" defer></script>
         <script src="crteffect.js" defer></script>
+        <script src="parallaxstart.js" defer></script>
     </head>
 
     <body>
         <div id="crt"></div>
         <div id="maincontainer">
-            <div id="bgparticles-back"></div>
-            <div id="bgparticles-front"></div>
+            <div id="parallax" data-relative-input="true">
+                <div data-depth="0.2" id="bgparticles-back"></div>
+                <div data-depth="0.6" id="bgparticles-front"></div>
+            </div>
             <div class="container">
                 <img src="assets/deicide2.png" style="display: block; margin: auto; width: 50%;"> <br>
                 <p class="loginheader">PROJECT OUROBOROS <br> FINALE // THE SUPREMUM</p> <br>
